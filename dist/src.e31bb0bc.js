@@ -28952,29 +28952,32 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
                                                                       */ /* ADIM 0 buraya*/
 function Sayac() {
   /* ADIM 1 buraya*/
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
     sayici = _useState2[0],
     setSayici = _useState2[1];
   var artirici = function artirici() {
     /* ADIM 4 buraya */
+    setSayici(sayici + 1);
   };
   var azaltici = function azaltici() {
     /* ADIM 5 */
+    setSayici(sayici - 1);
   };
-  var reset = function reset() {};
+  var reset = function reset() {
+    setSayici(0);
+  };
   var stil = {
     fontSize: "1.5em",
     marginBottom: "0.3em",
-    color: "royalblue" /* ADIM 2 */
+    color: !(sayici % 2) ? "royalblue" : "crimson"
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-counter container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici, " "), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, "Say\u0131 ", sayici, " ", !(sayici % 2) ? "çift" : "tek"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -29402,7 +29405,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53766" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57473" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
